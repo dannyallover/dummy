@@ -166,7 +166,9 @@ chain {
       unused_bits: VAL0
     }
   }
-  tbs_certificate {
+}
+chain {
+    tbs_certificate {
     value {
       version {
         value: v1
@@ -332,12 +334,6 @@ chain {
       val: ""
       unused_bits: VAL0
     }
-  }
-}
-operations {
-  mutate_signature_operation {
-    valid: true
-    index: CERT_3
   }
 }
 operations {
