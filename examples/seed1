@@ -1,27 +1,254 @@
-chain {
-  tbs_certificate {
-    value {
-      version {
-        value: v1
+tbs_certificate {
+  value {
+    version {
+      value: v1
+    }
+    serial_number {
+      value {
+        val: "\00\BC\01\41\05\22\D8\CC\7F\02\00\00\00\00\79\64\7F"
       }
-      serial_number {
-        value {
-          val: ""
+    }
+    signature_algorithm {
+      value {
+        object_identifier {
+          id {
+            encoding: Primitive
+            id_class: Universal
+            tag_num {
+              low_tag_num: VAL6
+            }
+          }
+          len {
+          }
+          val {
+            val_array {
+              val_bits: "\2A\86\48\86\F7\0D\01\01\0B"
+            }
+          }
+        }
+        parameters {
+          id {
+            encoding: Primitive
+            id_class: Universal
+            tag_num {
+              low_tag_num: VAL5
+            }
+          }
+          len {
+          }
+          val {
+            val_array {
+              val_bits {
+                "\00"
+              }
+            }
+          }
         }
       }
-      signature_algorithm {
-        value {
+    }
+    issuer {
+      value {
+        id {
+          encoding: Primitive
+          id_class: Universal
+          tag_num {
+            low_tag_num: VAL16
+          }
+        }
+        len {
+        }
+        val {
+          val_array {
+            pdu {
+              id {
+                encoding: Primitive
+                id_class: Universal
+                tag_num {
+                  low_tag_num: VAL17
+                }
+              }
+              len {
+              }
+              val {
+                val_array {
+                  pdu {
+                    id {
+                      encoding: Primitive
+                      id_class: Universal
+                      tag_num {
+                        low_tag_num: VAL16
+                      }
+                    }
+                    len {
+                    }
+                    val {
+                      val_array {
+                        pdu {
+                          id {
+                            encoding: Primitive
+                            id_class: Universal
+                            tag_num {
+                              low_tag_num: VAL6
+                            }
+                          }
+                          len {
+                          }
+                          val {
+                            val_array {
+                              val_bits: "\55\04\03"
+                            }
+                          }
+                        }
+                      }
+                      val_array {
+                        pdu {
+                          id {
+                            encoding: Primitive
+                            id_class: Universal
+                            tag_num {
+                              low_tag_num: VAL19
+                            }
+                          }
+                          len {
+                          }
+                          val {
+                            val_array {
+                              val_bits: "Test Certificate"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    validity {
+      value {
+        not_before {
+          value {
+            generalized_time {
+              time_stamp {
+                seconds: 1595875632
+                nanos: 0
+              }
+            }
+          }
+        }
+        not_after {
+          value {
+            generalized_time {
+              time_stamp {
+                seconds: 1598554032
+                nanos: 2
+              }
+            }
+          }
+        }
+      }
+    }
+    subject {
+      value {
+        id {
+          encoding: Primitive
+          id_class: Universal
+          tag_num {
+            low_tag_num: VAL16
+          }
+        }
+        len {
+        }
+        val {
+          val_array {
+            pdu {
+              id {
+                encoding: Primitive
+                id_class: Universal
+                tag_num {
+                  low_tag_num: VAL17
+                }
+              }
+              len {
+              }
+              val {
+                val_array {
+                  pdu {
+                    id {
+                      encoding: Primitive
+                      id_class: Universal
+                      tag_num {
+                        low_tag_num: VAL16
+                      }
+                    }
+                    len {
+                    }
+                    val {
+                      val_array {
+                        pdu {
+                          id {
+                            encoding: Primitive
+                            id_class: Universal
+                            tag_num {
+                              low_tag_num: VAL6
+                            }
+                          }
+                          len {
+                          }
+                          val {
+                            val_array {
+                              val_bits: "\55\04\03"
+                            }
+                          }
+                        }
+                      }
+                      val_array {
+                        pdu {
+                          id {
+                            encoding: Primitive
+                            id_class: Universal
+                            tag_num {
+                              low_tag_num: VAL19
+                            }
+                          }
+                          len {
+                          }
+                          val {
+                            val_array {
+                              val_bits: "Test Certificate"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    subject_public_key_info {
+      value {
+        algorithm_identifier {
           object_identifier {
             id {
               encoding: Primitive
               id_class: Universal
               tag_num {
-                low_tag_num: VAL0
+                low_tag_num: VAL6
               }
             }
             len {
             }
             val {
+              val_array {
+                val_bits: "\2A\86\48\CE\3D\02\01"
+              }
             }
           }
           parameters {
@@ -29,322 +256,69 @@ chain {
               encoding: Primitive
               id_class: Universal
               tag_num {
-                low_tag_num: VAL0
+                low_tag_num: VAL6
               }
             }
             len {
             }
             val {
+              val_array {
+                val_bits: "\2A\86\48\CE\3D\03\01\07"
+              }
             }
+          }
+        }
+        subject_public_key {
+          value {
+            val: "00\04\BC\1C\AA\96\6F\6F\99\48\79\56\61\4B\7F\FF\DC\39\08\3A\D4\4D\E2\D8\87\80\AF\3D\18\5E\71\2D\CE\09\70\57\39\38\5F\2A\EE\A8\35\F4\3A\86\86\5A\1D\C7\31\32\1B\8D\AC\D0\46\AD\C3\FC\A5\D3\18\36\68\AB"
+            unused_bits: VAL0
           }
         }
       }
-      issuer {
-        value {
-          id {
-            encoding: Primitive
-            id_class: Universal
-            tag_num {
-              low_tag_num: VAL0
-            }
-          }
-          len {
-          }
-          val {
-          }
-        }
-      }
-      validity {
-        value {
-          not_before {
-            value {
-              generalized_time {
-                time_stamp {
-                }
-              }
-            }
-          }
-          not_after {
-            value {
-              generalized_time {
-                time_stamp {
-                }
-              }
-            }
-          }
-        }
-      }
-      subject {
-        value {
-          id {
-            encoding: Primitive
-            id_class: Universal
-            tag_num {
-              low_tag_num: VAL0
-            }
-          }
-          len {
-          }
-          val {
-          }
-        }
-      }
-      subject_public_key_info {
-        value {
-          algorithm_identifier {
-            object_identifier {
-              id {
-                encoding: Primitive
-                id_class: Universal
-                tag_num {
-                  low_tag_num: VAL0
-                }
-              }
-              len {
-              }
-              val {
-              }
-            }
-            parameters {
-              id {
-                encoding: Primitive
-                id_class: Universal
-                tag_num {
-                  low_tag_num: VAL0
-                }
-              }
-              len {
-              }
-              val {
-              }
-            }
-          }
-          subject_public_key {
-            value {
-              val: ""
-              unused_bits: VAL0
-            }
-          }
-        }
-      }
-    }
-  }
-  signature_algorithm {
-    value {
-      object_identifier {
-        id {
-          encoding: Primitive
-          id_class: Universal
-          tag_num {
-            low_tag_num: VAL0
-          }
-        }
-        len {
-          indefinite_form: true
-        }
-        val {
-        }
-      }
-      parameters {
-        id {
-          encoding: Primitive
-          id_class: Universal
-          tag_num {
-            low_tag_num: VAL0
-          }
-        }
-        len {
-        }
-        val {
-        }
-      }
-    }
-  }
-  signature_value {
-    value {
-      val: ""
-      unused_bits: VAL0
     }
   }
 }
-chain {
-    tbs_certificate {
-    value {
-      version {
-        value: v1
-      }
-      serial_number {
-        value {
-          val: ""
+signature_algorithm {
+  value {
+    object_identifier {
+      id {
+        encoding: Primitive
+        id_class: Universal
+        tag_num {
+          low_tag_num: VAL6
         }
       }
-      signature_algorithm {
-        value {
-          object_identifier {
-            id {
-              encoding: Primitive
-              id_class: Universal
-              tag_num {
-                low_tag_num: VAL0
-              }
-            }
-            len {
-            }
-            val {
-            }
-          }
-          parameters {
-            id {
-              encoding: Primitive
-              id_class: Universal
-              tag_num {
-                low_tag_num: VAL0
-              }
-            }
-            len {
-            }
-            val {
-            }
-          }
-        }
+      len {
       }
-      issuer {
-        value {
-          id {
-            encoding: Primitive
-            id_class: Universal
-            tag_num {
-              low_tag_num: VAL0
-            }
-          }
-          len {
-          }
-          val {
-          }
-        }
-      }
-      validity {
-        value {
-          not_before {
-            value {
-              generalized_time {
-                time_stamp {
-                }
-              }
-            }
-          }
-          not_after {
-            value {
-              generalized_time {
-                time_stamp {
-                }
-              }
-            }
-          }
-        }
-      }
-      subject {
-        value {
-          id {
-            encoding: Primitive
-            id_class: Universal
-            tag_num {
-              low_tag_num: VAL0
-            }
-          }
-          len {
-          }
-          val {
-          }
-        }
-      }
-      subject_public_key_info {
-        value {
-          algorithm_identifier {
-            object_identifier {
-              id {
-                encoding: Primitive
-                id_class: Universal
-                tag_num {
-                  low_tag_num: VAL0
-                }
-              }
-              len {
-              }
-              val {
-              }
-            }
-            parameters {
-              id {
-                encoding: Primitive
-                id_class: Universal
-                tag_num {
-                  low_tag_num: VAL0
-                }
-              }
-              len {
-              }
-              val {
-              }
-            }
-          }
-          subject_public_key {
-            value {
-              val: ""
-              unused_bits: VAL0
-            }
-          }
+      val {
+        val_array {
+          val_bits: "\2A\86\48\86\F7\0D\01\01\0B"
         }
       }
     }
-  }
-  signature_algorithm {
-    value {
-      object_identifier {
-        id {
-          encoding: Primitive
-          id_class: Universal
-          tag_num {
-            low_tag_num: VAL0
-          }
-        }
-        len {
-          indefinite_form: true
-        }
-        val {
+    parameters {
+      id {
+        encoding: Primitive
+        id_class: Universal
+        tag_num {
+          low_tag_num: VAL5
         }
       }
-      parameters {
-        id {
-          encoding: Primitive
-          id_class: Universal
-          tag_num {
-            low_tag_num: VAL0
+      len {
+      }
+      val {
+        val_array {
+          val_bits {
+            "\00"
           }
         }
-        len {
-        }
-        val {
-        }
       }
-    }
-  }
-  signature_value {
-    value {
-      val: ""
-      unused_bits: VAL0
     }
   }
 }
-operations {
-  mutate_signature_operation {
-    valid: true
-    index: CERT_2
-  }
-}
-operations {
-  mutate_signature_operation {
-    valid: true
-    index: CERT_1
+signature_value {
+  value {
+    val: "\00"
+    unused_bits: VAL0
   }
 }
