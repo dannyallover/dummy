@@ -5,7 +5,7 @@ tbs_certificate {
     }
     serial_number {
       value {
-        val: "\00\BC\01\41\05\22\D8\CC\7F\02\00\00\00\00\79\64\7F"
+        val: "abcdefg"
       }
     }
     signature_algorithm {
